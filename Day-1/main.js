@@ -34,10 +34,41 @@
 // }
 
 
-let num = 0
-let count = 0
-for (let i = 0; i <= 5; i++) {
-    count = count + i
-}
+// let num = 0
+// let count = 0
+// for (let i = 0; i <= 5; i++) {
+//     count = count + i
+// }
 
-console.log(count)
+// console.log(count)
+
+// let ages = [ 20,21,22,23,24,15,16,26,28,30]
+// let numberOfPeople = ages.length
+
+// for (let i=0; i<numberOfPeople; i++){
+//     if (ages[i] % 2 === 0) {
+//         console.log(ages[i])
+//     }
+// }
+
+// var array = [3 , 6, 2, 56, 32, 5, 89, 32];
+// var largest= 0;
+
+// for (i=0; i<=largest;i++){
+//     if (array>largest) {
+//         var largest=array[i];
+//     }
+// }
+
+// console.log(largest);
+
+
+// var arr = [3, 6, 2, 546, 32, 5, 89, 32];
+// var largest = arr[0];
+
+// for (var i = 0; i < arr.length; i++) {
+//   if (arr[i] > largest ) {
+//     largest = arr[i];
+//   }
+// }
+// console.log(largest);
