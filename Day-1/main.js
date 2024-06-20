@@ -161,14 +161,27 @@
 // console.log(value);
 
 
-function calculateArithmetic(a,b, finalFn) {
-    const ans = finalFn(a,b)
-    return ans
-}
+// function calculateArithmetic(a,b, finalFn) {
+//     const ans = finalFn(a,b)
+//     return ans
+// }
 
-function sum(a,b) {
-    return a + b
-}
+// function sum(a,b) {
+//     return a + b
+// }
 
-const value = calculateArithmetic(4,2, sum)
-console.log(value);
+// const value = calculateArithmetic(4,2, sum)
+// console.log(value);
+
+
+//setTimeout
+
+// function greet() {
+//    console.log("hello");
+// }
+// function greetAlien() {
+//    console.log("hello alien");
+// }
+
+// setInterval(greetAlien, 2000)
+// setTimeout(greetAlien, 2000)
