@@ -186,13 +186,32 @@
 // setInterval(greetAlien, 2000)
 // setTimeout(greetAlien, 2000)
 
-function counter() {
-    for (let i = 30; i >= 0; i--) {
-        setTimeout(function() {
-          console.log(i);
-        }, (30 - i) * 1000);
-      }
+// function counter() {
+//     for (let i = 30; i >= 0; i--) {
+//         setTimeout(function() {
+//           console.log(i);
+//         }, (30 - i) * 1000);
+//       }
       
+// }
+
+// counter()
+
+// Function to display the current time
+function displayClock() {
+    const now = new Date();
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const seconds = String(now.getSeconds()).padStart(2, '0');
+    const timeString = `${hours}:${minutes}:${seconds}`;
+
+    // Clear the console before displaying the time
+    console.clear();
+    console.log(timeString);
 }
 
-counter()
+// Update the clock every second
+setInterval(displayClock, 1000);
+
+// Initial display of the clock
+displayClock();
