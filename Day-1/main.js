@@ -185,3 +185,14 @@
 
 // setInterval(greetAlien, 2000)
 // setTimeout(greetAlien, 2000)
+
+function counter() {
+    for (let i = 30; i >= 0; i--) {
+        setTimeout(function() {
+          console.log(i);
+        }, (30 - i) * 1000);
+      }
+      
+}
+
+counter()
