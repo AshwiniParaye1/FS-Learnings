@@ -72,3 +72,44 @@
 //   }
 // }
 // console.log(largest);
+
+// const users1 = {
+//     fName: "Ashwini",
+//     gender: "female"
+// }
+
+// console.log(users1["fName"]);
+
+const allUsers = [
+{
+    fName: "Ashwini",
+    gender: "female",
+    metadata: {
+        age: 20,
+        address: "xyzefe"
+    }
+},
+{
+    fName: "Mayuri",
+    gender: "female",
+    metadata: {
+        age: 21,
+        address: "xyzeferfe"
+    }
+},
+{
+    fName: "Akshay",
+    gender: "male",
+    metadata: {
+        age: 25,
+        address: "xyz"
+    }
+}
+]
+
+for (let i = 0; i < allUsers.length; i++) {
+   if (allUsers[i]["metadata"]["age"] > 22) {
+    console.log(allUsers[i]["fName"]);
+   }
+    
+}
