@@ -80,36 +80,69 @@
 
 // console.log(users1["fName"]);
 
-const allUsers = [
-{
-    fName: "Ashwini",
-    gender: "female",
-    metadata: {
-        age: 20,
-        address: "xyzefe"
-    }
-},
-{
-    fName: "Mayuri",
-    gender: "female",
-    metadata: {
-        age: 21,
-        address: "xyzeferfe"
-    }
-},
-{
-    fName: "Akshay",
-    gender: "male",
-    metadata: {
-        age: 25,
-        address: "xyz"
-    }
-}
-]
+// const allUsers = [
+// {
+//     fName: "Ashwini",
+//     gender: "female",
+//     metadata: {
+//         age: 20,
+//         address: "xyzefe"
+//     }
+// },
+// {
+//     fName: "Mayuri",
+//     gender: "female",
+//     metadata: {
+//         age: 21,
+//         address: "xyzeferfe"
+//     }
+// },
+// {
+//     fName: "Akshay",
+//     gender: "male",
+//     metadata: {
+//         age: 25,
+//         address: "xyz"
+//     }
+// }
+// ]
 
-for (let i = 0; i < allUsers.length; i++) {
-   if (allUsers[i]["metadata"]["age"] > 22) {
-    console.log(allUsers[i]["fName"]);
-   }
+// for (let i = 0; i < allUsers.length; i++) {
+//    if (allUsers[i]["metadata"]["age"] > 22) {
+//     console.log(allUsers[i]["fName"]);
+//    }
     
+// }
+
+
+// function findSum(num1, num2) {
+//     return num1 + num2;
+// }
+
+// const value = findSum(2,4)
+// console.log(value);
+
+
+// let sum = 0;
+
+// for (let i = 0; i < 10000000000000000; i++) {
+//     sum = sum + i;
+    
+// }
+
+// console.log(sum);
+
+
+function sum(num1, num2, fnToCall) {
+    let result = num1 + num2
+    fnToCall(result)
 }
+
+function displayResult(data) {
+    console.log("Result of the sum is: " + data);
+}
+function displayResultPassive(data) {
+    console.log("Sum's result is : " + data);
+}
+
+const ans = sum(2,2,displayResultPassive)
