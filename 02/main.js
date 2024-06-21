@@ -172,3 +172,33 @@ const currentDate = new Date()
 // console.log(Object.assign({}, sampleObj, {
 //     newKey: "newValue"
 // }));
+
+
+// function square(n) {
+//     return n*n
+// }
+
+// function sumOfSquare(a,b) {
+//     const val1 = square(a)
+//     const val2 = square(b)
+//     return val1 + val2
+// }
+
+// const ans = sumOfSquare(1,2)
+// console.log(ans);
+
+function square(n) {
+    return n*n
+}
+function cube(n) {
+    return n*n
+}
+
+function sumOfSomething(a, b, fn) {
+    const val1 = fn(a)
+    const val2 = fn(b)
+    return val1 + val2
+}
+
+const ans = sumOfSomething(2,2, cube)
+console.log(ans);
