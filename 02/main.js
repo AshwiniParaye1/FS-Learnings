@@ -151,3 +151,10 @@ const currentDate = new Date()
 // const afterTimeInMs = afterDate.getTime()
 
 // console.log(afterTimeInMs - beforeTimeInMs);
+
+
+// console.log(Math.random());
+// console.log(Math.floor(2.4));
+// console.log(Math.ceil(2.4));
+// console.log(Math.max(2,5,4));
+// console.log(Math.min(2,5,4));
