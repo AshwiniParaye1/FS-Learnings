@@ -91,11 +91,32 @@
 // }
 
 
-const initialArr = [1,2,3,4]
-const secondArr = [8, 8]
+// const initialArr = [1,2,3,4]
+// const secondArr = [8, 8]
 
-function logThing(str) {
-    console.log(str);
-}
+// function logThing(str) {
+//     console.log(str);
+// }
 
-initialArr.forEach(logThing)
+// initialArr.forEach(logThing)
+
+// class Animal {
+//     constructor(name, legCount, speaks){
+//         this.name = name;
+//         this.legCount = legCount;
+//         this.speaks = speaks
+//     }
+//     static myType (){
+//         console.log("this is the static function");
+//     }
+//     speak (){
+//         console.log("hi there I am " + this.name + " and I do " + this.speaks);
+//     }
+// }
+// Animal.myType()
+
+// let dog = new Animal("dog", 4, "bhow bhow") // create objects
+// let cat = new Animal("cat", 4, "meow meow")
+
+// dog.speak() //call function on object
+// cat.speak()
