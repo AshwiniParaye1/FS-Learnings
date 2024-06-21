@@ -158,3 +158,17 @@ const currentDate = new Date()
 // console.log(Math.ceil(2.4));
 // console.log(Math.max(2,5,4));
 // console.log(Math.min(2,5,4));
+
+// const sampleObj = {
+//     key1: "value1",
+//     key2: "value2",
+//     key3: "value3",
+// }
+
+// console.log(Object.keys(sampleObj));
+// console.log(Object.values(sampleObj));
+// console.log(Object.entries(sampleObj));
+// console.log(sampleObj.hasOwnProperty("key1"));
+// console.log(Object.assign({}, sampleObj, {
+//     newKey: "newValue"
+// }));
