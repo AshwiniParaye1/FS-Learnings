@@ -28,22 +28,22 @@
 
 // console.log("hi 2");
 
-console.log("hi");
+// console.log("hi");
 
-setTimeout(function timeout() {
-  console.log("first set timeout function");
-}, 8000);
+// setTimeout(function timeout() {
+//   console.log("first set timeout function");
+// }, 8000);
 
-setTimeout(function timeout() {
-  console.log("second set timeout function");
-}, 5000);
+// setTimeout(function timeout() {
+//   console.log("second set timeout function");
+// }, 5000);
 
-let a = 0;
-for (let i = 0; i < 10; i++) {
-  a = a + 1;
-}
+// let a = 0;
+// for (let i = 0; i < 10; i++) {
+//   a = a + 1;
+// }
 
-console.log(a);
+// console.log(a);
 
 // console.log("hi");
 
