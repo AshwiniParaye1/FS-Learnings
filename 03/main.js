@@ -117,3 +117,25 @@
 // p.then(function () {
 //   console.log(p);
 // });
+
+// function ashwinisAsyncFunction(params) {
+//   var d = new Promise(function (resolve) {
+//     setTimeout(function () {
+//       resolve("hi there from promise");
+//     }, 2000);
+//   });
+//   return d;
+// }
+
+// async function main() {
+//   // no callbacks, no .then syntax
+//   // ashwinisAsyncFunction.then(function(value){
+//   //     console.log(value);
+//   // })
+//   let value = await ashwinisAsyncFunction();
+//   console.log("hi there after await");
+//   console.log(value);
+// }
+
+// main();
+// console.log("after main");
