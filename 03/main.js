@@ -72,3 +72,48 @@
 // }
 
 // ashwiniReadsFile(onDone);
+
+//promises
+// const fs = require("fs");
+
+// //own async function
+// function ashwiniReadsFile(cb) {
+//   return new Promise(function (resolve) {
+//     console.log("inside promise");
+//     fs.readFile("ex.txt", "utf-8", function (err, data) {
+//       console.log("before resolve");
+//       resolve(data);
+//     });
+//   });
+// }
+
+// //callback function to call
+// function onDone(data) {
+//   console.log(data);
+// }
+
+// // ashwiniReadsFile().then(onDone);
+// var a = ashwiniReadsFile();
+// console.log("a==", a);
+// a.then(onDone);
+
+// var d = new Promise(function (resolve) {
+//   setTimeout(function () {
+//     resolve("foo");
+//   }, 1000);
+// });
+
+// function callback() {
+//   console.log(d);
+// }
+
+// console.log(d);
+// d.then(callback);
+
+// let p = new Promise(function (resolve) {
+//   resolve("hi there");
+// });
+
+// p.then(function () {
+//   console.log(p);
+// });
