@@ -56,3 +56,19 @@
 // }
 
 // calculateSum();
+
+// const fs = require("fs");
+
+// //own asyn function
+// function ashwiniReadsFile(cb) {
+//   fs.readFile("ex.txt", "utf-8", function (err, data) {
+//     cb(data);
+//   });
+// }
+
+// //callback function to call
+// function onDone(data) {
+//   console.log(data);
+// }
+
+// ashwiniReadsFile(onDone);
