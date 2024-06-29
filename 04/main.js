@@ -89,3 +89,33 @@
 //     console.log("second");
 //   });
 // });
+
+// function sum(a, b) {
+//   return new Promise(function (resolve) {
+//     resolve(a + b);
+//   });
+// }
+
+// sum(1, 2).then(function (ans) {
+//   console.log(ans);
+// });
+
+// console.log("at the top 1");
+
+// function promisifiedTimeout() {
+//   console.log("function called 3");
+//   return new Promise(function (resolve) {
+//     console.log("inside promise 4");
+//     setTimeout(function () {
+//       console.log("inside set timeout 5");
+//       resolve("resolved the promise");
+//     }, 5000);
+//   });
+// }
+
+// console.log("in the middle 2");
+
+// promisifiedTimeout().then(function (value) {
+//   console.log("inside .then 6");
+//   console.log(value);
+// });
