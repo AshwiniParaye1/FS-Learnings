@@ -65,4 +65,14 @@ app.post("/health-checkup", function (req, res) {
   res.send("you have " + kidneyLength + "kidneys");
 });
 
-app.listen(3000);
+//global catches
+app.use(function (err, req, res, next) {
+  console.log(err);
+  res.status(400).json({
+    msg: "Something wrong with the server",
+  });
+});
+
+app.listen(3000, () => {
+  console.log(`Example app listening on port 3000`);
+});
