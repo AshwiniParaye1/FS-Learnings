@@ -82,6 +82,7 @@ const express = require("express");
 const zod = require("zod");
 const app = express();
 
+//defining a schema
 const schema = zod.array(zod.number());
 
 app.use(express.json());
@@ -89,6 +90,8 @@ app.use(express.json());
 app.post("/health-checkup", function (req, res) {
   // kidneys = [1,2]
   const kidneys = req.body.kidneys;
+
+  //validating the input
   const response = schema.safeParse(kidneys);
 
   if (!response.success) {
