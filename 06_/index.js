@@ -52,25 +52,55 @@
 //   res.send("health-checkup 2");
 // });
 
+// const express = require("express");
+// const zod = require("zod");
+// const app = express();
+
+// app.use(express.json());
+
+// app.post("/health-checkup", function (req, res) {
+//   // kidneys = [1,2]
+//   const kidneys = req.body.kidneys;
+//   const kidneyLength = kidneys.length;
+
+//   res.send("you have " + kidneyLength + "kidneys");
+// });
+
+// //global catches
+// app.use(function (err, req, res, next) {
+//   console.log(err);
+//   res.status(400).json({
+//     msg: "Something wrong with the server",
+//   });
+// });
+
+// app.listen(3000, () => {
+//   console.log(`Example app listening on port 3000`);
+// });
+
 const express = require("express");
+const zod = require("zod");
 const app = express();
+
+const schema = zod.array(zod.number());
 
 app.use(express.json());
 
 app.post("/health-checkup", function (req, res) {
   // kidneys = [1,2]
   const kidneys = req.body.kidneys;
-  const kidneyLength = kidneys.length;
+  const response = schema.safeParse(kidneys);
 
-  res.send("you have " + kidneyLength + "kidneys");
-});
-
-//global catches
-app.use(function (err, req, res, next) {
-  console.log(err);
-  res.status(400).json({
-    msg: "Something wrong with the server",
-  });
+  if (!response.success) {
+    res.status(411).json({
+      msg: "Input is invalid",
+    });
+    return;
+  } else {
+    res.send({
+      response,
+    });
+  }
 });
 
 app.listen(3000, () => {
