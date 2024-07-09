@@ -9,15 +9,15 @@
   <body>
     <script>
       //fetch using promise
-      // function getAnimalData() {
-      //   const response = fetch("https://fakerapi.it/api/v1/persons").then(
-      //     function (response) {
-      //       response.json().then(function (data) {
-      //         console.log(data);
-      //       });
-      //     }
-      //   );
-      // }
+      function getAnimalData() {
+        const response = fetch("https://fakerapi.it/api/v1/persons").then(
+          function (response) {
+            response.json().then(function (data) {
+              console.log(data);
+            });
+          }
+        );
+      }
 
       //fetch using async await
       async function getAnimalData() {
