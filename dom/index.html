@@ -4,14 +4,27 @@
     <meta charset="UTF-8" />
     <title>DOM</title>
     <script>
-      function calculateSum() {
-        // const element = document.getElementById("finalSum");
-        // element.innerHTML = "Hello World!";
+      // function calculateSum() {
+      //   // const element = document.getElementById("finalSum");
+      //   // element.innerHTML = "Hello World!";
 
+      //   const a = document.getElementById("num1").value;
+      //   const b = document.getElementById("num2").value;
+      //   const element = document.getElementById("finalSum");
+      //   // element.innerHTML = parseInt(a) + parseInt(b);
+      //   fetch(`http://localhost:3000/sum?a=${a}&b=${b}`).then((res) => {
+      //     res.text().then((ans) => {
+      //       document.getElementById("finalSum").innerHTML = ans;
+      //     });
+      //   });
+      // }
+
+      async function calculateSum() {
         const a = document.getElementById("num1").value;
         const b = document.getElementById("num2").value;
-        const element = document.getElementById("finalSum");
-        element.innerHTML = parseInt(a) + parseInt(b);
+        const res = await fetch(`http://localhost:3000/sum?a=${a}&b=${b}`);
+        const ans = await res.text();
+        document.getElementById("finalSum").innerHTML = ans;
       }
     </script>
   </head>
