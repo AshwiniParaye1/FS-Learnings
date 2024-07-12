@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>DOM</title>
+    <script>
+      function calculateInterest() {
+        const principal = document.getElementById("principal").value;
+        const rate = document.getElementById("rate").value;
+        const time = document.getElementById("time").value;
+        const interest = document.getElementById("finalInterest");
+        interest.innerHTML =
+          (parseInt(principal) * parseInt(rate) * parseInt(time)) / 100;
+
+        fetch(
+          `http://localhost:3000/interest?principal=${principal}&rate=${rate}&time=${time}`
+        ).then((res) => {
+          res.text().then((ans) => {
+            document.getElementById("finalInterest").innerHTML = ans;
+          });
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <input id="principal" type="text" placeholder="Enter Principal Amount" />
+    <br /><br />
+    <input id="rate" type="text" placeholder="Enter Rate" /><br /><br />
+    <input id="time" type="text" placeholder="Enter Time" /><br /><br /><br />
+    <button onclick="calculateInterest()">Calculate Interest</button>
+    <div id="finalInterest"></div>
+  </body>
+</html>
