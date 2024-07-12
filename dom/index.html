@@ -1,17 +1,24 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <title>DOM</title>
+    <script>
+      function calculateSum() {
+        const element = document.getElementById("finalSum");
+        element.innerHTML = "Hello World!";
+      }
+    </script>
   </head>
   <body>
     <input type="text" placeholder="Enter a number" /><br /><br />
     <input type="text" placeholder="Enter another number" /><br /><br />
-    <button>Calculate Sum</button>
+    <button onclick="calculateSum()">Calculate Sum</button><br /><br />
+    <div id="finalSum"></div>
   </body>
-</html> -->
+</html>
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -39,4 +46,4 @@
     <div id="container2">id 1</div>
     <div id="container2">id 2</div>
   </body>
-</html>
+</html> -->
