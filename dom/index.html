@@ -5,14 +5,23 @@
     <title>DOM</title>
     <script>
       function calculateSum() {
+        // const element = document.getElementById("finalSum");
+        // element.innerHTML = "Hello World!";
+
+        const a = document.getElementById("num1").value;
+        const b = document.getElementById("num2").value;
         const element = document.getElementById("finalSum");
-        element.innerHTML = "Hello World!";
+        element.innerHTML = parseInt(a) + parseInt(b);
       }
     </script>
   </head>
   <body>
-    <input type="text" placeholder="Enter a number" /><br /><br />
-    <input type="text" placeholder="Enter another number" /><br /><br />
+    <input id="num1" type="text" placeholder="Enter a number" /><br /><br />
+    <input
+      id="num2"
+      type="text"
+      placeholder="Enter another number"
+    /><br /><br />
     <button onclick="calculateSum()">Calculate Sum</button><br /><br />
     <div id="finalSum"></div>
   </body>
