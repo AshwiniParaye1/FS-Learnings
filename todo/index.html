@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      let globalId = 1;
+
+      function createChild(title, description, id) {
+        const child = document.createElement("div");
+
+        const firstGrandChild = document.createElement("div");
+        firstGrandChild.innerHTML = title;
+
+        const secondGrandChild = document.createElement("div");
+        secondGrandChild.innerHTML = description;
+
+        const thirdGrandChild = document.createElement("button");
+        thirdGrandChild.innerHTML = "Mark as done";
+        thirdGrandChild.setAttribute("onclick", `markAsDone(${id})`);
+
+        child.appendChild(firstGrandChild);
+        child.appendChild(secondGrandChild);
+        child.appendChild(thirdGrandChild);
+
+        child.setAttribute("id", id);
+        return child;
+      }
+
+      // state will always be an array
+      // every element of state will be an object which will have title, description and id
+      //
+      //
+      function updateDomAccordingToState(state) {
+        const parent = document.getElementById("container");
+        parent.innerHTML = "";
+        for (let i = 0; i < state.length; i++) {
+          const child = createChild(
+            state[i].title,
+            state[i].description,
+            state[i].id
+          );
+          parent.appendChild(child);
+        }
+      }
+      window.setInterval(async () => {
+        const res = await fetch("https://sum-server.100xdevs.com/todos");
+        const data = await res.json();
+        updateDomAccordingToState(data.todos);
+      }, 5000);
+    </script>
+  </head>
+  <body>
+    <div>
+      <input id="title" type="text" placeholder="title" /><br /><br />
+      <input
+        id="description"
+        type="text"
+        placeholder="description"
+      /><br /><br />
+
+      <div id="container"></div>
+    </div>
+  </body>
+</html>
