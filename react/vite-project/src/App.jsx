@@ -2,6 +2,7 @@
 import "./App.css";
 // import ChildComponent from "./ChildComponent";
 import ParentComponent from "./ParentComponent";
+import ReactElement from "./ReactElement";
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -11,6 +12,7 @@ function App() {
         count is {count}
       </button> */}
       <ParentComponent />
+      <ReactElement />
     </div>
   );
 }
