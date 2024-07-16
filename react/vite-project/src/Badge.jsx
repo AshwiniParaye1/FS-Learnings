@@ -16,7 +16,7 @@ export default function Badge({ name, handle, img, link }) {
           jsx("p", {
             children: ["@", handle],
           }),
-          jsx("a", {
+          jsx("p", {
             children: ["View Profile: ", link],
           }),
         ],
