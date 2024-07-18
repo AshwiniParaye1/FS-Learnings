@@ -1,8 +1,6 @@
-/* eslint-disable react/prop-types */
-import { useState } from "react";
-
+import React, { useState } from "react";
+import "./App.css";
 export default function Todo({ todo, handleUpdateTodo, handleDeleteTodo }) {
-  // const [completed, setCompleted] = useState(false);
   const [editing, setEditing] = useState(false);
 
   const handleCheckboxClick = () =>
@@ -35,17 +33,16 @@ export default function Todo({ todo, handleUpdateTodo, handleDeleteTodo }) {
             type="checkbox"
             id={todo.id}
           />
-          <span />
           {editing ? (
             <input onChange={handleEditTodo} value={todo.label} type="text" />
           ) : (
-            <span>{todo.label} </span>
+            <span className={todo.completed ? "completed" : ""}>
+              {todo.label}
+            </span>
           )}
-
-          <button onClick={handleEditClick}>
-            {" "}
-            {editing ? "Save" : "Edit"}{" "}
-          </button>
+        </div>
+        <div>
+          <button onClick={handleEditClick}>{editing ? "Save" : "Edit"}</button>
           <button onClick={handleDeleteClick}>Delete</button>
         </div>
       </label>

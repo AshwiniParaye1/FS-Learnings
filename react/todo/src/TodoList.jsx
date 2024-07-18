@@ -1,24 +1,12 @@
 import React from "react";
 import Todo from "./Todo";
 import TodoComposer from "./TodoComposer";
-
+import "./App.css";
 export default function TodoList() {
   const [todos, setTodos] = React.useState([
-    {
-      id: 1,
-      label: "Learn React",
-      completed: false,
-    },
-    {
-      id: 2,
-      label: "Learn Javascript",
-      completed: false,
-    },
-    {
-      id: 3,
-      label: "Learn Next.js",
-      completed: false,
-    },
+    { id: 1, label: "Learn React", completed: false },
+    { id: 2, label: "Learn Javascript", completed: false },
+    { id: 3, label: "Learn Next.js", completed: false },
   ]);
 
   const handleUpdateTodo = (updatedTodo) => {

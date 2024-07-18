@@ -1,6 +1,5 @@
-/* eslint-disable react/prop-types */
-import * as React from "react";
-
+import React from "react";
+import "./App.css";
 function createTodo(label) {
   return {
     id: Math.floor(Math.random() * 10000),
@@ -8,6 +7,7 @@ function createTodo(label) {
     completed: false,
   };
 }
+
 export default function TodoComposer({ handleAddTodo }) {
   const [label, setLabel] = React.useState("");
 
