@@ -1,4 +1,5 @@
 import * as React from "react";
+import Wave from "./Wave";
 
 function Greetings({ name }) {
   const [index, setIndex] = React.useState(0);
@@ -21,6 +22,9 @@ function Greetings({ name }) {
         {greetings[index]}, {name}
       </h1>
       <button onClick={handleClick}>Next Greeting</button>
+      <br />
+      <br />
+      <Wave />
     </main>
   );
 }
