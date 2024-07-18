@@ -1,6 +1,7 @@
 import "./App.css";
+import Linear from "./Linear";
 // import Counter from "./Counter";
-import Counter2 from "./Counter2";
+// import Counter2 from "./Counter2";
 // import Greetings from "./Greetings";
 
 function App() {
@@ -10,7 +11,9 @@ function App() {
 
       {/* <Counter /> */}
 
-      <Counter2 />
+      {/* <Counter2 /> */}
+
+      <Linear />
     </>
   );
 }
