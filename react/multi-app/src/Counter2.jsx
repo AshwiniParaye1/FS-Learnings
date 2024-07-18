@@ -7,6 +7,7 @@ export default function Counter2() {
     setCount(count + 1);
     setCount(count + 1);
     setCount(count + 1);
+    setCount((c) => c + 1);
   };
   const handleDecrement = () => {
     setCount(count - 1);
