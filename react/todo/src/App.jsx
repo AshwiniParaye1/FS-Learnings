@@ -1,12 +1,13 @@
+import React from "react";
 import TodoList from "./TodoList";
 import "./App.css";
 
 function App() {
   return (
-    <>
-      <h1 style={{ textAlign: "center" }}>Todo App</h1>
+    <div className="todo-app">
+      <h1>Todo App</h1>
       <TodoList />
-    </>
+    </div>
   );
 }
 

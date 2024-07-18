@@ -22,7 +22,7 @@ export default function TodoComposer({ handleAddTodo }) {
   };
 
   return (
-    <li>
+    <li className="todo-composer">
       <input
         type="text"
         value={label}

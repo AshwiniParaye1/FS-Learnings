@@ -1,3 +1,25 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background: #f0f0f0;
+}
+
+.todo-app {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 768px;
+  max-width: 500px;
+}
+
+h1 {
+  text-align: center;
+}
+
 ul {
   list-style-type: none;
   padding: 0;
