@@ -2,9 +2,13 @@ import * as React from "react";
 import Wave from "./Wave";
 
 function Greetings({ name }) {
-  const [index, setIndex] = React.useState(
-    Number(localStorage.getItem("index"))
-  );
+  const [index, setIndex] = React.useState(() => {
+    if (typeof window === "undefined") {
+      return 0;
+    }
+
+    return Number(localStorage.getItem("index"));
+  });
 
   const greetings = ["Hello", "Hola", "Bonjour"];
 
