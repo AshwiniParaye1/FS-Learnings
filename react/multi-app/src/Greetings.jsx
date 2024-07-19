@@ -1,14 +1,7 @@
 import * as React from "react";
-import Wave from "./Wave";
 
-function Greetings({ name }) {
-  const [index, setIndex] = React.useState(() => {
-    if (typeof window === "undefined") {
-      return 0;
-    }
-
-    return Number(localStorage.getItem("index"));
-  });
+function Greeting({ name }) {
+  const [index, setIndex] = React.useState(0);
 
   const greetings = ["Hello", "Hola", "Bonjour"];
 
@@ -16,8 +9,16 @@ function Greetings({ name }) {
     const nextIndex = index === greetings.length - 1 ? 0 : index + 1;
     setIndex(nextIndex);
 
-    localStorage.setItem(index, index);
+    localStorage.setItem("index", nextIndex);
   };
+
+  React.useEffect(() => {
+    const item = localStorage.getItem("index");
+
+    if (item) {
+      setIndex(Number(item));
+    }
+  }, []);
 
   return (
     <main>
@@ -25,16 +26,10 @@ function Greetings({ name }) {
         {greetings[index]}, {name}
       </h1>
       <button onClick={handleClick}>Next Greeting</button>
-      <br />
-      <br />
-      <Wave />
     </main>
   );
 }
 
-export default Greetings;
-
-{
-  /* greetings initiates a rerendering
-as the state is changed everytime button is clicked */
+export default function App() {
+  return <Greeting name="Tyler" />;
 }
