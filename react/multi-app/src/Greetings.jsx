@@ -2,7 +2,9 @@ import * as React from "react";
 import Wave from "./Wave";
 
 function Greetings({ name }) {
-  const [index, setIndex] = React.useState(0);
+  const [index, setIndex] = React.useState(
+    Number(localStorage.getItem("index"))
+  );
 
   const greetings = ["Hello", "Hola", "Bonjour"];
 
@@ -10,10 +12,7 @@ function Greetings({ name }) {
     const nextIndex = index === greetings.length - 1 ? 0 : index + 1;
     setIndex(nextIndex);
 
-    {
-      /* greetings initiates a rerendering
-    as the state is changed everytime button is clicked */
-    }
+    localStorage.setItem(index, index);
   };
 
   return (
@@ -30,3 +29,8 @@ function Greetings({ name }) {
 }
 
 export default Greetings;
+
+{
+  /* greetings initiates a rerendering
+as the state is changed everytime button is clicked */
+}
