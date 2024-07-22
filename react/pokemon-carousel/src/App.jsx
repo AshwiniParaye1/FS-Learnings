@@ -11,6 +11,7 @@ function App() {
   useEffect(() => {
     const handleFetchPokemon = async () => {
       console.log("fetching pokemon", id);
+      console.log("fetching", setLoading());
       setLoading(true);
       setError(null);
 
