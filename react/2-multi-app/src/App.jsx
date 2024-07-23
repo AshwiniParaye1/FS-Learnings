@@ -1,35 +1,27 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+/* eslint-disable no-unused-vars */
+import * as React from "react";
+import delorean from "./delorean";
+import Cafe80s from "./Cafe80s";
 
-function App() {
-  const [count, setCount] = useState(0)
+export default function App() {
+  const [passengers, setPassengers] = React.useState([
+    {
+      name: "Marty McFly",
+      age: 17,
+      occupation: "High School Student",
+      catchphrase: "Whoa, this is heavy.",
+    },
+    {
+      name: "Dr. Emmett Brown",
+      age: 55,
+      occupation: "Scientist",
+      catchphrase: "Great Scott!",
+    },
+  ]);
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <delorean.Provider value={passengers}>
+      <Cafe80s />
+    </delorean.Provider>
+  );
 }
-
-export default App
