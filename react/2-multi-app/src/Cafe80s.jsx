@@ -16,7 +16,7 @@ export default function Cafe80s() {
       </p>
       <h4>Current Guests</h4>
       <ul>
-        <li>
+        <li style={{ color: "yellow", fontWeight: "bold", fontSize: "1.5em" }}>
           {marty.name}: Age {marty.age}. {marty.occupation}.
         </li>
       </ul>

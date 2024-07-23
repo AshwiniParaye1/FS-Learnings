@@ -1,10 +1,6 @@
-// import React from 'react'
-import Cafe80s from "./Cafe80s";
+import * as React from "react";
+import "./App.css";
 
-export default function delorean() {
-  return (
-    <div>
-      <Cafe80s />
-    </div>
-  );
-}
+const delorean = React.createContext();
+
+export default delorean;
