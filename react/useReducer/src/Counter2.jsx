@@ -1,27 +1,55 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import * as React from "react";
 import Slider from "./Slider";
 
-export default function Counter() {
-  const [count, setCount] = React.useState(0);
-  const [step, setStep] = React.useState(1);
+function reducer(state, action) {
+  if (action.type === "increment") {
+    return {
+      count: state.count + state.step,
+      step: state.step,
+    };
+  } else if (action.type === "decrement") {
+    return {
+      count: state.count - state.step,
+      step: state.step,
+    };
+  } else if (action.type === "reset") {
+    return {
+      count: 0,
+      step: state.step,
+    };
+  } else if (action.type === "updateStep") {
+    return {
+      count: state.count,
+      step: action.step,
+    };
+  } else {
+    throw new Error("This action type isn't supported.");
+  }
+}
 
-  const handleIncrement = () => setCount(count + step);
-  const handleDecrement = () => setCount(count - step);
-  const handleReset = () => setCount(0);
-  const handleUpdateStep = (step) => setStep(step);
+export default function Counter() {
+  const [state, dispatch] = React.useReducer(reducer, {
+    count: 0,
+    step: 1,
+  });
+
+  const handleIncrement = () => dispatch({ type: "increment" });
+  const handleDecrement = () => dispatch({ type: "decrement" });
+  const handleReset = () => dispatch({ type: "reset" });
+  const handleUpdateStep = (step) => dispatch({ type: "updateStep", step });
 
   React.useEffect(() => {
     console.log("useEffect called");
     const id = window.setInterval(() => {
-      setCount((c) => c + step);
+      dispatch({ type: "increment" });
     }, 1000);
 
     return () => window.clearInterval(id);
-  }, [step]);
+  }, []);
+
   return (
     <main>
-      <h1>{count}</h1>
+      <h1>{state.count}</h1>
       <div>
         <button style={{ marginRight: "10px" }} onClick={handleDecrement}>
           -
