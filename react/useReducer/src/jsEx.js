@@ -13,12 +13,19 @@
 // });
 // console.log(state);
 
-const numbers = [1, 2, 3, 4, 5];
+const numbers = [2, 4, 6];
 const initialState = 0;
 
 function reducer(state, value) {
-  return state + value;
+  const nextState = state + value;
+
+  console.log(
+    `Reducer invoked. state: ${state}, value: ${value}, nextState: ${nextState}`
+  );
+
+  return nextState;
 }
 
 const total = numbers.reduce(reducer, initialState);
-console.log(`Total: ${total}`);
+
+console.log(`total: ${total}`);
