@@ -1,31 +1,40 @@
 import * as React from "react";
+import Slider from "./Slider";
 
 function reducer(state, action) {
   if (action === "increment") {
-    return state + 1;
+    return {
+      count: state.count + 1,
+      step: state.step,
+    };
   } else if (action === "decrement") {
-    return state - 1;
+    return {
+      count: state.count - 1,
+      step: state.step,
+    };
   } else if (action === "reset") {
-    return 0;
+    return {
+      count: 0,
+      step: state.step,
+    };
   } else {
-    throw new Error("Unknown action");
+    throw new Error("This action type isn't supported.");
   }
 }
 
-const initialState = 0;
+const initialState = { count: 0, step: 1 };
 
 export default function Counter() {
   const [count, dispatch] = React.useReducer(reducer, initialState);
 
-  const handleIncrement = () => {
-    dispatch("increment");
-  };
-  const handleDecrement = () => {
-    dispatch("decrement");
-  };
-  const handleReset = () => {
-    dispatch("reset");
-  };
+  const handleIncrement = () => dispatch({ type: "increment" });
+  const handleDecrement = () => dispatch({ type: "decrement" });
+  const handleReset = () => dispatch({ type: "reset" });
+  const handleUpdateStep = (step) =>
+    dispatch({
+      type: "updateStep",
+      step,
+    });
 
   return (
     <main>
@@ -39,6 +48,9 @@ export default function Counter() {
         <br />
         <button onClick={handleReset}>Reset</button>
       </div>
+      <br />
+      <br />
+      <Slider min={1} max={10} onChange={handleUpdateStep} />
     </main>
   );
 }
