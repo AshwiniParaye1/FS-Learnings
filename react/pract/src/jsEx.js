@@ -31,14 +31,14 @@
 
 // console.log(me === friend);
 
-const leo = {
-  type: "Dog",
-  name: "Leo",
-};
+// const leo = {
+//   type: "Dog",
+//   name: "Leo",
+// };
 
-const leito = {
-  type: "Dog",
-  name: "Leo",
-};
+// const leito = {
+//   type: "Dog",
+//   name: "Leo",
+// };
 
-console.log(leo === leito);
+// console.log(leo === leito);
