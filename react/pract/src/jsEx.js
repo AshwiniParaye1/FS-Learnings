@@ -42,3 +42,22 @@
 // };
 
 // console.log(leo === leito);
+
+// const a = {};
+// const b = a;
+
+// console.log(a === b); //reference value
+
+// {} === {} //false
+
+// const nope = () => ({});
+// const noop = () => ({});
+
+// console.log(nope === noop);
+
+// const c = [];
+// const d = c;
+
+// console.log(c === d);
+
+// [] === [];
