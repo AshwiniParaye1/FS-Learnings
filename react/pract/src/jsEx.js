@@ -12,16 +12,21 @@
 // console.log("lastName:", lastName);
 // console.log("displayName:", displayName);
 
-let leo = {
-  type: "Dog",
-  age: 0,
-  goodBoy: true,
-  name: "Leo",
-};
+// let leo = {
+//   type: "Dog",
+//   age: 0,
+//   goodBoy: true,
+//   name: "Leo",
+// };
 
-let snoop = leo;
+// let snoop = leo;
 
-snoop.name = "Snoop";
+// snoop.name = "Snoop";
 
-console.log("leo's name:", leo.name);
-console.log("snoop's name:", snoop.name);
+// console.log("leo's name:", leo.name);
+// console.log("snoop's name:", snoop.name);
+
+const me = "Tyler";
+const friend = "Tyler";
+
+console.log(me === friend);
