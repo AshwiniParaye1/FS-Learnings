@@ -33,14 +33,21 @@
 // console.log(value2);
 ///////////////////////////////////////////////
 //write a function to return true if user is 18+
-function isLegal(age) {
-    if (age >= 18) {
-        return true;
-    }
-    else {
-        return false;
-    }
+// function isLegal(age: number): boolean {
+//   if (age >= 18) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+// const result = isLegal(13);
+// console.log(result);
+///////////////////////////////////////////////
+// write a function that takes another function as input and runs it after 2 seconds
+function runAfterOneSecond(fn) {
+    setTimeout(fn, 1000 * 2);
 }
-const result = isLegal(13);
-console.log(result);
+runAfterOneSecond(function () {
+    console.log("hi there after 2 seconds");
+});
 ///////////////////////////////////////////////
