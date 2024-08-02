@@ -59,12 +59,30 @@
 ///////////////////////////////////////////////
 
 // write a function that takes another function as input and runs it after 2 seconds
-function runAfterOneSecond(fn: () => void) {
-  setTimeout(fn, 1000 * 2);
-}
+// function runAfterOneSecond(fn: () => void) {
+//   setTimeout(fn, 1000 * 2);
+// }
 
-runAfterOneSecond(function () {
-  console.log("hi there after 2 seconds");
-});
+// runAfterOneSecond(function () {
+//   console.log("hi there after 2 seconds");
+// });
+
+///////////////////////////////////////////////
+
+// target specification and compatibility check
+// const greet = (firstName: string) => {
+//   console.log(`Heyy ${firstName}`);
+// };
+
+// greet("Ashwini");
+
+///////////////////////////////////////////////
+
+// es-5
+const greet2 = (firstName: string) => {
+  console.log(`Heyy ${firstName}`);
+};
+
+greet2("Ashwini");
 
 ///////////////////////////////////////////////
