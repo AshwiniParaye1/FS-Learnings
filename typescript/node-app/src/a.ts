@@ -79,10 +79,16 @@
 ///////////////////////////////////////////////
 
 // es-5
-const greet2 = (firstName: string) => {
+// const greet2 = (firstName: string) => {
+//   console.log(`Heyy ${firstName}`);
+// };
+
+// greet2("Ashwini");
+
+///////////////////////////////////////////////
+
+const greet = (firstName: string) => {
   console.log(`Heyy ${firstName}`);
 };
 
-greet2("Ashwini");
-
-///////////////////////////////////////////////
+greet("Ashwini");

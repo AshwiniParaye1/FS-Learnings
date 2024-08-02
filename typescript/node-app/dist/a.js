@@ -58,8 +58,12 @@
 // greet("Ashwini");
 ///////////////////////////////////////////////
 // es-5
-var greet2 = function (firstName) {
-    console.log("Heyy ".concat(firstName));
-};
-greet2("Ashwini");
+// const greet2 = (firstName: string) => {
+//   console.log(`Heyy ${firstName}`);
+// };
+// greet2("Ashwini");
 ///////////////////////////////////////////////
+const greet = (firstName) => {
+    console.log(`Heyy ${firstName}`);
+};
+greet("Ashwini");
