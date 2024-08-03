@@ -88,6 +88,7 @@
 ///////////////////////////////////////////////
 
 const greet = (firstName: string) => {
+  console.log(`${firstName}`);
   console.log(`Heyy ${firstName}`);
 };
 
