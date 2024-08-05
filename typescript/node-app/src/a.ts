@@ -88,10 +88,37 @@
 ///////////////////////////////////////////////
 
 // removeComments
-const greet = (firstName: string) => {
-  console.log(`Heyy ${firstName}`);
-};
+// const greet = (firstName: string) => {
+//   console.log(`Heyy ${firstName}`);
+// };
 
-greet("Ashwini");
+// greet("Ashwini");
 
 ///////////////////////////////////////////////
+
+// function runAfterOneSecond(fn: () => void) {
+//   setTimeout(fn, 1000 * 2);
+// }
+
+// runAfterOneSecond(function () {
+//   console.log("hi there after 2 seconds");
+//   return 5;
+// });
+
+////////////////////////////////////////////////
+
+// create a function isLegal that returns true if user is 18+. it takes user interface as an input
+
+const user = {
+  firstname: "Ashwini",
+  lastname: "Paraye",
+  email: "XQlPn@example.com",
+  age: 13,
+};
+
+interface User {
+  firstname: string;
+  lastname: string;
+  email: string;
+  age: number;
+}
