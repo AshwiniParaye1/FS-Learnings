@@ -87,8 +87,10 @@
 
 ///////////////////////////////////////////////
 
-const greet = (firstName: string) => {
-  console.log(`Heyy ${firstName}`);
-};
+// const greet = (firstName: string) => {
+//   console.log(`Heyy ${firstName}`);
+// };
 
-greet("Ashwini");
+// greet("Ashwini");
+
+///////////////////////////////////////////////
