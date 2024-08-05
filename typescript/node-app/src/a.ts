@@ -87,10 +87,11 @@
 
 ///////////////////////////////////////////////
 
-// const greet = (firstName: string) => {
-//   console.log(`Heyy ${firstName}`);
-// };
+// removeComments
+const greet = (firstName: string) => {
+  console.log(`Heyy ${firstName}`);
+};
 
-// greet("Ashwini");
+greet("Ashwini");
 
 ///////////////////////////////////////////////
