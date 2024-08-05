@@ -108,17 +108,39 @@
 ////////////////////////////////////////////////
 
 // create a function isLegal that returns true if user is 18+. it takes user interface as an input
+// const user = {
+//   firstname: "Ashwini",
+//   lastname: "Paraye",
+//   email: "XQlPn@example.com",
+//   age: 13,
+// };
 
-const user = {
-  firstname: "Ashwini",
-  lastname: "Paraye",
-  email: "XQlPn@example.com",
-  age: 13,
-};
+// interface User {
+//   firstname: string;
+//   lastname: string;
+//   email?: string; //? means optional
+//   age: number;
+// }
 
-interface User {
-  firstname: string;
-  lastname: string;
-  email: string;
-  age: number;
-}
+// function isLegal(user: User) {
+//   if (user.age >= 18) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+
+// //one way of calling the function with interface
+// const result = isLegal(user);
+// console.log(result);
+
+// //another way of calling the function with interface
+// const result2 = isLegal({
+//   firstname: "Ashwini",
+//   lastname: "Paraye",
+//   email: "XQlPn@example.com",
+//   age: 18,
+// });
+// console.log(result2);
+
+///////////////////////////////////////////////
