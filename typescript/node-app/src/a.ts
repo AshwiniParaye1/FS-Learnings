@@ -245,3 +245,25 @@
 // console.log(maxValue([1, 229922, 82323, 9, 10]));
 
 ///////////////////////////////////////////////
+
+// given a list of users, filter out the users that are legal
+
+// type User = {
+//   firstname: string;
+//   lastname: string;
+//   age: number;
+// };
+
+// function isLegal(user: User[]) {
+//   return user.filter((u) => u.age >= 18);
+// }
+
+// console.log(
+//   isLegal([
+//     { firstname: "User1", lastname: "abc", age: 13 },
+//     { firstname: "User2", lastname: "xyz", age: 18 },
+//     { firstname: "User3", lastname: "sdfkbwe", age: 22 },
+//   ])
+// );
+
+///////////////////////////////////////////////
