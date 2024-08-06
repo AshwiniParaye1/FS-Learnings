@@ -181,7 +181,7 @@ type User = {
 
 type GreetArgs = number | string; //union type
 
-function Greet(id: number | string) {
+function Greet(id: number | string | boolean) {
   console.log(`Hello ${id}`);
 }
 
