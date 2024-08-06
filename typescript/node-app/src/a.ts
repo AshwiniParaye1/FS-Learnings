@@ -146,13 +146,13 @@
 ///////////////////////////////////////////////
 
 //implementing interface
-interface person {
+interface Person {
   name: string;
   age: number;
   greet(phrase: string): void;
 }
 
-class Employee implements person {
+class Employee implements Person {
   name: string;
   age: number;
 
@@ -165,3 +165,6 @@ class Employee implements person {
     console.log(`${phrase} ${this.name}`);
   }
 }
+
+const e = new Employee("Ashwini", 18);
+e.greet("Hi there");

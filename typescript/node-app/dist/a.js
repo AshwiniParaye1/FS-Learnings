@@ -1,22 +1,12 @@
 "use strict";
-const user = {
-    firstname: "Ashwini",
-    lastname: "Paraye",
-    email: "XQlPn@example.com",
-    age: 13,
-};
-function isLegal(user) {
-    if (user.age >= 18) {
-        return true;
+class Employee {
+    constructor(n, a) {
+        this.name = n;
+        this.age = a;
     }
-    else {
-        return false;
+    greet(phrase) {
+        console.log(`${phrase} ${this.name}`);
     }
 }
-const result2 = isLegal({
-    firstname: "Ashwini",
-    lastname: "Paraye",
-    email: "XQlPn@example.com",
-    age: 18,
-});
-console.log(result2);
+const e = new Employee("Ashwini", 18);
+e.greet("Hi there");
