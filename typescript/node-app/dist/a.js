@@ -1,12 +1,6 @@
 "use strict";
-class Employee {
-    constructor(n, a) {
-        this.name = n;
-        this.age = a;
-    }
-    greet(phrase) {
-        console.log(`${phrase} ${this.name}`);
-    }
+function Greet(id) {
+    console.log(`Hello ${id}`);
 }
-const e = new Employee("Ashwini", 18);
-e.greet("Hi there");
+Greet("Ashwini");
+Greet(13);

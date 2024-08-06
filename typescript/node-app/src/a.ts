@@ -173,8 +173,17 @@
 
 // Types
 
-type User {
+type User = {
   firstname: string;
   lastname: string;
   age: number;
+};
+
+type GreetArgs = number | string; //union type
+
+function Greet(id: number | string) {
+  console.log(`Hello ${id}`);
 }
+
+Greet("Ashwini");
+Greet(13);
