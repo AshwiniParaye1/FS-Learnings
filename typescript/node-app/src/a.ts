@@ -173,17 +173,48 @@
 
 // Types
 
-type User = {
-  firstname: string;
-  lastname: string;
-  age: number;
-};
+// type User = {
+//   firstname: string;
+//   lastname: string;
+//   age: number;
+// };
 
-type GreetArgs = number | string; //union type
+// type GreetArgs = number | string; //union type
 
-function Greet(id: number | string | boolean) {
-  console.log(`Hello ${id}`);
-}
+// function Greet(id: number | string | boolean) {
+//   console.log(`Hello ${id}`);
+// }
 
-Greet("Ashwini");
-Greet(13);
+// Greet("Ashwini");
+// Greet(13);
+
+///////////////////////////////////////////////
+
+// type Employee = {
+//   name: string;
+//   startDate: Date;
+// };
+
+// type Manager = {
+//   name: string;
+//   department: string;
+// };
+
+// interface Manager2 {
+//   name: string;
+//   department: string;
+//   experience: number;
+// }
+
+// type TeamLead = Employee & Manager & Manager2; //intersection type
+
+// const teamLead: TeamLead = {
+//   name: "Ashwini",
+//   startDate: new Date(),
+//   department: "IT",
+//   experience: 5,
+// };
+
+// console.log(teamLead);
+
+///////////////////////////////////////////////

@@ -1,6 +1,8 @@
 "use strict";
-function Greet(id) {
-    console.log(`Hello ${id}`);
-}
-Greet("Ashwini");
-Greet(13);
+const teamLead = {
+    name: "Ashwini",
+    startDate: new Date(),
+    department: "IT",
+    experience: 5,
+};
+console.log(teamLead);
