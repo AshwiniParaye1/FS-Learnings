@@ -146,25 +146,27 @@
 ///////////////////////////////////////////////
 
 //implementing interface
-interface Person {
-  name: string;
-  age: number;
-  greet(phrase: string): void;
-}
+// interface Person {
+//   name: string;
+//   age: number;
+//   greet(phrase: string): void;
+// }
 
-class Employee implements Person {
-  name: string;
-  age: number;
+// class Employee implements Person {
+//   name: string;
+//   age: number;
 
-  constructor(n: string, a: number) {
-    this.name = n;
-    this.age = a;
-  }
+//   constructor(n: string, a: number) {
+//     this.name = n;
+//     this.age = a;
+//   }
 
-  greet(phrase: string) {
-    console.log(`${phrase} ${this.name}`);
-  }
-}
+//   greet(phrase: string) {
+//     console.log(`${phrase} ${this.name}`);
+//   }
+// }
 
-const e = new Employee("Ashwini", 18);
-e.greet("Hi there");
+// const e = new Employee("Ashwini", 18);
+// e.greet("Hi there");
+
+///////////////////////////////////////////////
