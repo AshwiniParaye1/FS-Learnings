@@ -218,3 +218,30 @@
 // console.log(teamLead);
 
 ///////////////////////////////////////////////
+
+//given an array of positive integers as input, return the maximum value in the array
+
+// type NumberArr = number[];
+// function maxValue(arr: NumberArr) {
+//   let max = arr[0];
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] > max) {
+//       max = arr[i];
+//     }
+//   }
+//   return max;
+// }
+
+// console.log(maxValue([1, 2222, 82323, 9, 10]));
+
+///////////////////////////////////////////////
+
+// type NumberArr = number[];
+
+// function maxValue(arr: NumberArr) {
+//   return Math.max(...arr);
+// }
+
+// console.log(maxValue([1, 229922, 82323, 9, 10]));
+
+///////////////////////////////////////////////

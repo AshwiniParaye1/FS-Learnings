@@ -1,8 +1,5 @@
 "use strict";
-const teamLead = {
-    name: "Ashwini",
-    startDate: new Date(),
-    department: "IT",
-    experience: 5,
-};
-console.log(teamLead);
+function maxValue(arr) {
+    return Math.max(...arr);
+}
+console.log(maxValue([1, 229922, 82323, 9, 10]));
