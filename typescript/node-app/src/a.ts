@@ -170,3 +170,11 @@
 // e.greet("Hi there");
 
 ///////////////////////////////////////////////
+
+// Types
+
+type User {
+  firstname: string;
+  lastname: string;
+  age: number;
+}
