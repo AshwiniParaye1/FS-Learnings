@@ -65,7 +65,9 @@ export default function SignupPage() {
       />
       <button
         onClick={onSignup}
-        className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600"
+        className={`p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600 ${
+          buttonDisabled && "bg-gray-400 text-gray-600 cursor-not-allowed"
+        }`}
         disabled={buttonDisabled}
       >
         Signup Here
