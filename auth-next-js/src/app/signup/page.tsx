@@ -15,6 +15,8 @@ export default function SignupPage() {
 
   const [buttonDisabled, setButtonDisabled] = React.useState(false);
 
+  const [loading, setLoading] = React.useState(false);
+
   const onSignup = async () => {};
 
   useEffect(() => {
@@ -63,8 +65,9 @@ export default function SignupPage() {
       <button
         onClick={onSignup}
         className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600"
+        disabled={buttonDisabled}
       >
-        {buttonDisabled ? "Disabled" : "Signup Here"}
+        Signup Here
       </button>
 
       <Link href="/login">Visit Login Page</Link>
