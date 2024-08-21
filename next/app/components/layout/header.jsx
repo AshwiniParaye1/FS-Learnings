@@ -1,6 +1,7 @@
 import React from "react"
 import Link from "next/link"
 import NavLink from "@components/ui/NavLink"
+import ContactButton from "@components/ui/ContactButton"
 
 function Header() {
   return (
@@ -14,6 +15,7 @@ function Header() {
             <li>
               <NavLink href='/about'>About</NavLink>
             </li>
+            <ContactButton />
           </ul>
         </nav>
       </header>
