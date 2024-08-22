@@ -2,6 +2,22 @@ import fs from "fs"
 import path from "path"
 import { compileMDX } from "next-mdx-remote/rsc"
 import Newsletter from "@/app/components/Newsletter"
+import rehypePrettyCode from "rehype-pretty-code"
+
+const prettyCodeOptions = {
+    theme: 'one-dark-pro',
+    onVisitLine(node) {
+        if(node.children.length === 0) {
+            node.children = [{type: 'text', value: ' '}]
+        }
+},
+    onVisitHighlightedLine(node) {
+        node.properties.className.push = ['highlighted']
+    },
+    onVisitHighlightedWord(node) {
+        node.properties.className = ['highlighted', 'word']
+    }
+}
 
 const rootDirectory = path.join(process.cwd(), "content")
 
@@ -22,7 +38,7 @@ const components = {
     </ul>
   ),
   li: props => (
-    <li className='text-extralight text-gray-500' {...props}>
+    <li className='text-extralight mb-6 text-gray-500' {...props}>
       {props.children}
     </li>
   ),
@@ -45,7 +61,10 @@ export async function getPostBySlug(slug) {
     source: fileContents,
     components,
     options: {
-      parseFrontmatter: true
+      parseFrontmatter: true,
+      mdxOptions: { 
+        rehypePlugins: [[rehypePrettyCode, prettyCodeOptions]] 
+    }
     }
   })
 
