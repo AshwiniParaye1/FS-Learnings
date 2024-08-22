@@ -1,6 +1,6 @@
 import React from 'react'
 
-function AboutLayout({ children }) {
+function CompanyLayout({ children }) {
   return (
     <section className='py-24'>
       <div className="container border py-4 rounded">
@@ -11,4 +11,4 @@ function AboutLayout({ children }) {
   )
 }
 
-export default AboutLayout
+export default CompanyLayout
