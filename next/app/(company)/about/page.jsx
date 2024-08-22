@@ -1,7 +1,10 @@
-import React from 'react'
+import { wait } from "@/lib/posts";
+import React from "react";
 
-function Page() {
-  return <div>About Page</div>
-}
+const Page = async () => {
+  await wait(2000);
 
-export default Page
+  return <div>About Page</div>;
+};
+
+export default Page;
