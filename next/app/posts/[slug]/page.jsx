@@ -11,9 +11,9 @@ const Page = async ({ params }) => {
       <div className='container'>
         {/* post formatter */}
         <header className='rounded bg-gray-100 p-8'>
-          <h1 className='font-serif text-3xl'>Learn NextJs</h1>
-          <p className='text-sm font-light uppercase leading-snug'>
-            Ashwini Paraye
+          <h1 className='text-3xl'>{frontmatter.title}</h1>
+          <p className='text-sm font-extralight uppercase leading-snug  tracking-wide'>
+            {frontmatter.author}
           </p>
         </header>
         {/* post content */}
