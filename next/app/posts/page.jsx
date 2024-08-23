@@ -1,23 +1,24 @@
-import { getAllPosts } from '@/lib/posts'
-import Link from 'next/link'
-import React from 'react'
+import { getAllPosts } from "@/lib/posts";
+import Link from "next/link";
+import React from "react";
 
-const Page = async() => {
+const Page = async () => {
+  const posts = await getAllPosts();
 
-  const posts = await  getAllPosts()
+  console.log(posts);
 
   return (
-    <section className='py-24'>
-      <div className='container'>
-        <h1 className='mt-4 text-3xl font-bold'>All Blog Posts</h1>
-        <ul className='mt-12'>
-          {posts.map(post => (
-            <li key={post.slug} className=' mb-2'>
+    <section className="py-24">
+      <div className="container">
+        <h1 className="mt-4 text-3xl font-bold">All Blog Posts</h1>
+        <ul className="mt-12">
+          {posts.map((post) => (
+            <li key={post.slug} className=" mb-2">
               <Link href={`/posts/${post.slug}`}>
-              <h4 className='text-lg font-medium'>
-              {post.frontmatter?.title}
-              </h4>
-                <p className='text-sm text-gray-500'>
+                <h4 className="text-lg font-medium">
+                  {post.frontmatter?.title}
+                </h4>
+                <p className="text-sm text-gray-500">
                   {post.frontmatter?.author}
                 </p>
               </Link>
@@ -26,7 +27,7 @@ const Page = async() => {
         </ul>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Page
+export default Page;
