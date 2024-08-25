@@ -5,6 +5,8 @@ import React from "react";
 const Page = async () => {
   const posts = await getAllPosts();
 
+  console.log(posts);
+
   return (
     <section className="py-24">
       <div className="container">
