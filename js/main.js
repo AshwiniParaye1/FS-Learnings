@@ -102,3 +102,72 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 //!  undefined and not defined
+
+// console.log(a);
+// var a = 10;
+
+// console.log(x);
+
+////////////////////////////////////////////////////////////////////////////////
+
+//! scope chain
+
+// console.log(b); //// undefined
+
+// function a() {
+//   console.log(b); //// 10
+// }
+
+// a(); //// undefined
+// var b = 10;
+// a();
+
+////////////////////////////////////////////////////////////////////////////////
+
+// var z = 88;
+
+// function a() {
+//   var b = 10;
+
+//   c();
+
+//   function c() {
+//     console.log("inside c : ", b); //// 10
+
+//     d();
+
+//     function d() {
+//       var x = 80;
+
+//       console.log("d() : ", b); //// 10
+
+//       console.log("zzzzzz: ", z);
+//     }
+
+//     console.log("x : ", x); //// not defined
+//   }
+
+//   console.log("inside a: ", x); //// not defined
+// }
+
+// a();
+
+// console.log("global : ", b); //// not defined
+
+////////////////////////////////////////////////////////////////////////////////
+
+// function a() {
+//   var b = 10;
+
+//   c();
+
+//   function c() {
+//     console.log("inside b: ", b);
+//   }
+// }
+
+// a();
+
+////////////////////////////////////////////////////////////////////////////////
+
+//! let, var, const | temporal dead zone
