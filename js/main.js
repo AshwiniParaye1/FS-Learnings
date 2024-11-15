@@ -218,3 +218,28 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 //! shadowing
+
+// let a = 20;
+
+// var b = 30;
+
+// const c = 40;
+
+// {
+//   let a = 200;
+//   console.log("inside block let a: ", a);
+
+//   var b = 300;
+//   console.log("inside block var b: ", b);
+
+//   const c = 400;
+//   console.log("inside block const c: ", c);
+// }
+
+// console.log("outside block let a: ", a);
+// console.log("outside block var b: ", b);
+// console.log("outside block const c: ", c);
+
+////////////////////////////////////////////////////////////////////////////////
+
+//! illegal shadowing
