@@ -394,3 +394,59 @@
 // counter1.decrementCounter();
 
 ////////////////////////////////////////////////////////////////////////////////
+
+// function a() {
+//   var x = 0;
+
+//   return function b() {
+//     console.log(x);
+//   };
+// }
+
+// a();
+
+////////////////////////////////////////////////////////////////////////////////
+
+//function statement / declaration
+// function a() {
+//   console.log("a called");
+// }
+// a();
+
+// //function expression
+// var b = function () {
+//   console.log("b called");
+// };
+// b();
+
+//anonymous function
+// function (){
+
+// }
+
+//named function expression
+// var b = function namedFunc() {
+//   console.log(namedFunc);
+// };
+
+// b();
+// namedFunc();
+
+////////////////////////////////////////////////////////////////////////////////
+
+//parameter and arguments
+
+// var b = function namedFunc(param1) {
+//   console.log(param1);
+// };
+
+// b("hi from param1");
+
+//first class functions
+// var b = function (param1) {
+//   return function () {};
+// };
+
+// console.log(b());
+
+////////////////////////////////////////////////////////////////////////////////
