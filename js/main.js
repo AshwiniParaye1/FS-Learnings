@@ -482,3 +482,10 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 //! event listener
+
+function attachEventListener() {
+  document.getElementById("click").addEventListener("click", function xyz() {
+    this.style = "background-color:red";
+    console.log("hey! bg is red now");
+  });
+}
