@@ -483,9 +483,21 @@
 
 //! event listener
 
-function attachEventListener() {
-  document.getElementById("click").addEventListener("click", function xyz() {
-    this.style = "background-color:red";
-    console.log("hey! bg is red now");
-  });
-}
+// function attachEventListener() {
+//   document.getElementById("click").addEventListener("click", function xyz() {
+//     this.style = "background-color:red";
+//     console.log("hey! bg is red now");
+//   });
+// }
+
+////////////////////////////////////////////////////////////////////////////////
+
+//! event loop
+
+console.log("start");
+
+setTimeout(function cb() {
+  console.log("callback");
+}, 3000);
+
+console.log("end");
