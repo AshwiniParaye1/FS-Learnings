@@ -313,28 +313,61 @@
 // x();
 
 ////////////////////////////////////////////////////////////////////////////////
-function outest() {
-  var c = 300;
-  function outer(b) {
-    // var a = 10;
 
-    function inner() {
-      console.log(a);
-      console.log(b);
-      console.log(c);
-    }
-    let a = 10;
-    //   inner();
-    return inner;
-  }
-  return outer;
-}
+// function outest() {
+//   var c = 300;
+//   function outer(b) {
+//     // var a = 10;
 
-// console.log("a", a); //gives error a is not defined
+//     function inner() {
+//       console.log(a);
+//       console.log(b);
+//       console.log(c);
+//     }
+//     let a = 10;
+//     //   inner();
+//     return inner;
+//   }
+//   return outer;
+// }
 
-// outer()();
+// // console.log("a", a); //gives error a is not defined
 
-// var close = outer("hello from param b");
-let a = 100;
-var close = outest()("hello from param b");
-close();
+// // outer()();
+
+// // var close = outer("hello from param b");
+// let a = 100;
+// var close = outest()("hello from param b");
+// close();
+
+////////////////////////////////////////////////////////////////////////////////
+
+// var count = 0;
+
+// function incrementCounter() {
+//   count++;
+// }
+
+// incrementCounter();
+
+// console.log(count);
+
+////////////////////////////////////////////////////////////////////////////////
+
+// function counter() {
+//   var count = 0;
+//   return function incrementCounter() {
+//     count++;
+//     console.log(count);
+//   };
+// }
+
+// // console.log(count);
+
+// var counter1 = counter();
+// var counter2 = counter();
+
+// counter1();
+// counter2();
+
+////////////////////////////////////////////////////////////////////////////////
