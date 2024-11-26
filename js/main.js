@@ -450,3 +450,35 @@
 // console.log(b());
 
 ////////////////////////////////////////////////////////////////////////////////
+
+//! callback functions
+
+// function x(y) {
+//   console.log("hello from x");
+
+//   y();
+// }
+
+// x(function y() {
+//   console.log("hello from y callback");
+// });
+
+////////////////////////////////////////////////////////////////////////////////
+
+// setTimeout(function () {
+//   console.log("timer");
+// }, 3000);
+
+// function x(y) {
+//   console.log("hello from x");
+
+//   y();
+// }
+
+// x(function y() {
+//   console.log("hello from y callback");
+// });
+
+////////////////////////////////////////////////////////////////////////////////
+
+//! event listener
