@@ -313,3 +313,28 @@
 // x();
 
 ////////////////////////////////////////////////////////////////////////////////
+function outest() {
+  var c = 300;
+  function outer(b) {
+    // var a = 10;
+
+    function inner() {
+      console.log(a);
+      console.log(b);
+      console.log(c);
+    }
+    let a = 10;
+    //   inner();
+    return inner;
+  }
+  return outer;
+}
+
+// console.log("a", a); //gives error a is not defined
+
+// outer()();
+
+// var close = outer("hello from param b");
+let a = 100;
+var close = outest()("hello from param b");
+close();
