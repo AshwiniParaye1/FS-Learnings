@@ -494,10 +494,10 @@
 
 //! event loop
 
-console.log("start");
+// console.log("start");
 
-setTimeout(function cb() {
-  console.log("callback");
-}, 3000);
+// setTimeout(function cb() {
+//   console.log("callback");
+// }, 3000);
 
-console.log("end");
+// console.log("end");
