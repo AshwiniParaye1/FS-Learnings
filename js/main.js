@@ -567,3 +567,18 @@
 // console.log(radius.map(area));
 
 ////////////////////////////////////////////////////////////////////////////////
+
+//! map, filter, reduce
+
+const arr = [8, 2, 6, 4, 1, 0];
+
+// const binary = function (x) {
+//   return x.toString(2);
+// };
+
+// const output = arr.map((arr) => 2 * arr);
+
+// const binaryOutput = arr.map(binary);
+
+// console.log(output);
+// console.log(binaryOutput);
