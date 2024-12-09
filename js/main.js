@@ -570,7 +570,7 @@
 
 //! map, filter, reduce
 
-const arr = [8, 2, 6, 4, 1, 0];
+// const arr = [8, 2, 6, 4, 1, 0];
 
 // const binary = function (x) {
 //   return x.toString(2);
