@@ -662,13 +662,13 @@
 
 //! some more examples
 
-const users = [
-  { firstName: "Aarav", lastName: "Sharma", age: 25 },
-  { firstName: "Isha", lastName: "Verma", age: 30 },
-  { firstName: "Rohan", lastName: "Patel", age: 22 },
-  { firstName: "Ananya", lastName: "Pandey", age: 25 },
-  { firstName: "Karan", lastName: "Mehta", age: 35 }
-];
+// const users = [
+//   { firstName: "Aarav", lastName: "Sharma", age: 25 },
+//   { firstName: "Isha", lastName: "Verma", age: 30 },
+//   { firstName: "Rohan", lastName: "Patel", age: 22 },
+//   { firstName: "Ananya", lastName: "Pandey", age: 25 },
+//   { firstName: "Karan", lastName: "Mehta", age: 35 }
+// ];
 
 //list of fullnames
 
@@ -689,3 +689,25 @@ const users = [
 // }, {});
 
 // console.log(output);
+
+////////////////////////////////////////////////////////////////////////////////
+
+// firstName of users whose age is less than 30
+
+// const users = [
+//   { firstName: "Aarav", lastName: "Sharma", age: 25 },
+//   { firstName: "Isha", lastName: "Verma", age: 30 },
+//   { firstName: "Rohan", lastName: "Patel", age: 22 },
+//   { firstName: "Ananya", lastName: "Pandey", age: 25 },
+//   { firstName: "Karan", lastName: "Mehta", age: 35 }
+// ];
+
+// const output = users.filter(function (ar) {
+//   if (ar.age < 30) {
+//     return ar.firstName;
+//   }
+// });
+
+// console.log(output);
+
+////////////////////////////////////////////////////////////////////////////////
