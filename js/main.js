@@ -657,3 +657,35 @@
 // }, 0);
 
 // console.log(output);
+
+////////////////////////////////////////////////////////////////////////////////
+
+//! some more examples
+
+const users = [
+  { firstName: "Aarav", lastName: "Sharma", age: 25 },
+  { firstName: "Isha", lastName: "Verma", age: 30 },
+  { firstName: "Rohan", lastName: "Patel", age: 22 },
+  { firstName: "Ananya", lastName: "Pandey", age: 25 },
+  { firstName: "Karan", lastName: "Mehta", age: 35 }
+];
+
+//list of fullnames
+
+// const output = users.map((x) => x.firstName + " " + x.lastName);
+
+// console.log(output);
+
+// no. of people with same age
+
+// const output = users.reduce(function (acc, curr) {
+//   if (acc[curr.age]) {
+//     acc[curr.age] = ++acc[curr.age];
+//   } else {
+//     acc[curr.age] = 1;
+//   }
+
+//   return acc;
+// }, {});
+
+// console.log(output);
