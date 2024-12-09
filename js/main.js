@@ -711,3 +711,47 @@
 // console.log(output);
 
 ////////////////////////////////////////////////////////////////////////////////
+
+//!chaining
+
+// firstName of users whose age is less than 30
+
+// const users = [
+//   { firstName: "Aarav", lastName: "Sharma", age: 25 },
+//   { firstName: "Isha", lastName: "Verma", age: 30 },
+//   { firstName: "Rohan", lastName: "Patel", age: 22 },
+//   { firstName: "Ananya", lastName: "Pandey", age: 25 },
+//   { firstName: "Karan", lastName: "Mehta", age: 35 }
+// ];
+
+// const output = users.filter((x) => x.age < 30).map((y) => y.firstName);
+
+// console.log(output);
+
+////////////////////////////////////////////////////////////////////////////////
+
+//!chaining
+
+// firstName of users whose age is less than 30 - using reduce
+
+// const users = [
+//   { firstName: "Aarav", lastName: "Sharma", age: 25 },
+//   { firstName: "Isha", lastName: "Verma", age: 30 },
+//   { firstName: "Rohan", lastName: "Patel", age: 22 },
+//   { firstName: "Ananya", lastName: "Pandey", age: 25 },
+//   { firstName: "Karan", lastName: "Mehta", age: 35 }
+// ];
+
+// console.log(users.filter((x) => x.age < 30));
+
+// const output = users
+//   .filter((x) => x.age < 30)
+//   .reduce((acc, curr) => {
+//     if (curr.age < 30) {
+//       acc.push(curr.firstName);
+//     }
+
+//     return acc;
+//   }, []);
+
+// console.log(output);
