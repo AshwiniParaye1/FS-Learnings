@@ -262,3 +262,32 @@ const numbers = [5, 6, 2, 3, 7];
 
 // person.getAge.call(person2);
 // person.getAgeArrow.call(person2);
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+// polyfill for call method
+
+let car1 = {
+  color: "Red",
+  company: "Ferrari"
+};
+
+function purchasedCar(currency, price) {
+  console.log(
+    `I have purchased ${this.color} - ${this.company} car for ${currency}${price}`
+  );
+}
+
+// purchasedCar.call(car1, "₹", 5000000);
+
+//polyfill
+Function.prototype.myCall = function (context = {}, ...args) {
+  if (typeof this !== "function") {
+    throw new Error(this, "It's not callable");
+  }
+
+  context.fn = this;
+  context.fn(...args);
+};
+
+purchasedCar.myCall(car1, "₹", 5000000);
