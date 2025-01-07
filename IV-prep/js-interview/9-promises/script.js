@@ -236,3 +236,48 @@
 //   .catch((err) => console.error("Error:Promises failed!", err));
 
 // console.log("finish");
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+// async await
+
+// console.log("start");
+
+// function impAction(username) {
+//   return new Promise((res, rej) => {
+//     setTimeout(() => {
+//       res(`Hey! I am ${username}`);
+//     }, 1000);
+//   });
+// }
+
+// function likeTheVideo(video) {
+//   return new Promise((res, rej) => {
+//     setTimeout(() => {
+//       rej(`Like the ${video} video`);
+//     }, 100);
+//   });
+// }
+// function shareTheVideo(video) {
+//   return new Promise((res, rej) => {
+//     setTimeout(() => {
+//       res(`Share the ${video} video`);
+//     }, 500);
+//   });
+// }
+
+// const result = async () => {
+//   try {
+//     const msg1 = await impAction("JavaScript");
+//     const msg2 = await likeTheVideo("JavaScript interview questions");
+//     const msg3 = await shareTheVideo("JavaScript interview questions");
+
+//     console.log({ msg1, msg2, msg3 });
+//   } catch (error) {
+//     console.error("Promise failed: ", error);
+//   }
+// };
+
+// result();
+
+// console.log("end");
