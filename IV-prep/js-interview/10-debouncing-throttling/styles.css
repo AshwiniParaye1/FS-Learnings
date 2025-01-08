@@ -1,0 +1,26 @@
+body {
+  background-color: blanchedalmond;
+}
+
+h1,
+h3 {
+  color: chocolate;
+  text-align: center;
+}
+
+.divClass {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.increment-pressed {
+  font-size: x-large;
+  color: blueviolet;
+}
+
+.increment-count {
+  font-size: x-large;
+  color: blueviolet;
+}
