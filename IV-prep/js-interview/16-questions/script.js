@@ -65,3 +65,78 @@
 // console.log(output); // [["eat", "tea", "ate"], ["tan", "nat"], ["bat"]]
 
 /////////////////////////////////////////////////////////////////////////////////////////
+
+//? Question 3: Two Sum
+
+// Problem:
+//? Given an array of integers and a target sum, return the indices of the two numbers that add up to the target.
+
+// const input = [2, 7, 11, 15];
+// const target = 9;
+// const output = twoSum(input, target);
+// Output: [0, 1] (because input[0] + input[1] = 2 + 7 = 9)
+
+// Explanation:
+
+// - Use a hashmap to store the numbers and their indices as you iterate through the array.
+// - For each number, calculate the complement (target - current number).
+// - Check if the complement exists in the hashmap. If it does, return the indices; otherwise, add the current number and its index to the hashmap.
+
+// function twoSum(input, target) {
+//   const hashmap = {};
+
+//   for (let i = 0; i < input.length; i++) {
+//     const complement = target - input[i];
+
+//     if (hashmap[complement] !== undefined) {
+//       return [hashmap[complement], i];
+//     }
+
+//     hashmap[input[i]] = i;
+//   }
+
+//   return [];
+// }
+
+// const input = [2, 7, 11, 15];
+// const target = 9;
+// const output = twoSum(input, target);
+// console.log(output); // Output: [0, 1]
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+//? Question 4: First Unique Character in a String
+
+// Problem:
+//? Given a string, find the first non-repeating character and return its index. If it doesn't exist, return -1.
+
+// Example:
+//const input = "leetcode";
+//const output = firstUniqueCharacter(input);
+// Output: 0 (the first unique character is 'l')
+
+// Explanation:
+
+// - Use a hashmap to count the occurrences of each character.
+// - Iterate through the string a second time to find the first character with a count of 1 in the hashmap.
+// - Return the index of that character.
+
+// function firstUniqueCharacter(input) {
+//   const hashmap = {};
+
+//   for (const char of input) {
+//     hashmap[char] = (hashmap[char] || 0) + 1;
+//   }
+
+//   for (let i = 0; i < input.length; i++) {
+//     if (hashmap[input[i]] === 1) {
+//       return i;
+//     }
+//   }
+
+//   return -1;
+// }
+
+// const input = "ceetcode";
+// const output = firstUniqueCharacter(input);
+// console.log(output); // Output: 0
