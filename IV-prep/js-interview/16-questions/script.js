@@ -140,3 +140,40 @@
 // const input = "ceetcode";
 // const output = firstUniqueCharacter(input);
 // console.log(output); // Output: 0
+
+/////////////////////////////////////////////////////////////////////////////////////////
+//? Question 5: Find All Duplicate Elements
+
+//Problem:
+//? Given an array of integers, return an array of all the elements that appear more than once.
+
+// Example:
+// const input = [1, 2, 3, 4, 3, 2, 1];
+// const output = findDuplicates(input);
+// Output: [1, 2, 3]
+
+// Explanation:
+// - Use a hashmap to count the occurrences of each number.
+// - After counting, iterate through the hashmap and collect keys that have a count greater than 1.
+// - Return the array of duplicates.
+
+// function findDuplicates(input) {
+//   const hashmap = {}; // Initialize an empty hashmap to store counts
+//   const duplicates = []; // This will hold the duplicate numbers
+
+//   for (const num of input) {
+//     hashmap[num] = (hashmap[num] || 0) + 1;
+//   }
+
+//   for (const num in hashmap) {
+//     if (hashmap[num] > 1) {
+//       duplicates.push(Number(num));
+//     }
+//   }
+
+//   return duplicates;
+// }
+
+// const input = [1, 2, 3, 4, 5, 6, 4, 3, 2, 1];
+// const output = findDuplicates(input);
+// console.log(output); // Output: [1, 2, 3]
