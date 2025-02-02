@@ -142,6 +142,7 @@
 // console.log(output); // Output: 0
 
 /////////////////////////////////////////////////////////////////////////////////////////
+
 //? Question 5: Find All Duplicate Elements
 
 //Problem:
@@ -177,3 +178,125 @@
 // const input = [1, 2, 3, 4, 5, 6, 4, 3, 2, 1];
 // const output = findDuplicates(input);
 // console.log(output); // Output: [1, 2, 3]
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+// Problem:
+//? Given a string, write a function that counts the frequency of each character in the string and returns an object where the keys are the characters and the values are their respective counts.
+
+// function countCharacterFrequencies(str) {
+//   //loop over each char in string
+//   for (let i = 0; i < str.length; i++) {
+//     //check if char already exist in string
+//     if (str.indexOf(str[i]) === i) {
+//       let count = 0;
+
+//       //loop thriough str again to check occurence
+//       for (let j = 0; j < str.length; j++) {
+//         //if it exists then increase the count
+//         if (str[i] === str[j]) {
+//           count++;
+//         }
+//       }
+//       console.log(str[i] + ":" + count);
+//     }
+//   }
+// }
+
+// const input = "hello world";
+// countCharacterFrequencies(input);
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+//? Problem: Given an array of numbers, calculate the sum of all the numbers.
+
+// let arr = [1, 2, 3, 4, 5];
+// let sum = 0;
+
+// function sumFn(arr) {
+//   for (let i = 0; i < arr.length; i++) {
+//     sum = sum + arr[i];
+//   }
+
+//   return sum;
+// }
+
+// const output = sumFn(arr);
+// console.log(output);
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+//? Problem: Given an array of numbers, find and return the largest number.
+
+// let arr = [1, 2, 13, 4, 5, 18];
+// let largest = 0;
+
+// for (let i = 0; i < arr.length; i++) {
+//   if (arr[i] > largest) {
+//     largest = arr[i];
+//   }
+// }
+
+// console.log(largest);
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+//? Problem: Write a function that checks if a given number is prime (a number greater than 1 that has no divisors other than 1 and itself).
+
+// function isPrime(num) {
+//   if (num < 2) return false; // Step 1: Check if number is less than 2
+//   for (let i = 2; i <= Math.sqrt(num); i++) {
+//     // Step 2: Loop through possible divisors
+//     if (num % i === 0) {
+//       return false; // Step 3: If divisible, return false
+//     }
+//   }
+//   return true; // Step 4: If no divisor, return true
+// }
+
+// console.log(isPrime(7)); // Output: true
+// console.log(isPrime(10)); // Output: false
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+//? Problem: Given a string, reverse it.
+
+// let str = "hello";
+// let reverseString = "";
+
+// for (let i = str.length - 1; i >= 0; i--) {
+//   reversedStr = reversedStr + str[i];
+// }
+
+// console.log(reversedStr);
+
+// function reverseStr(str) {
+//   reverseString = str.split("").reverse().join("");
+
+//   return reverseString;
+// }
+
+// console.log(reverseStr(str));
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+//? Write a function that takes a string and returns the number of vowels (a, e, i, o, u) in the string.
+
+// function countVowels(str) {
+//   let vowels = "aeiou";
+//   let count = 0;
+
+//   for (let i = 0; i < str.length; i++) {
+//     if (vowels.includes(str[i])) {
+//       count++;
+//     }
+//   }
+
+//   return count;
+// }
+
+// const output = countVowels("my name is ashwini");
+
+// console.log(output);
+
+/////////////////////////////////////////////////////////////////////////////////////////
