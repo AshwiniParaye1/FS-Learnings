@@ -7,8 +7,12 @@ const ProgressBar = ({ progress }) => {
         className="progressBar"
         style={{
           width: `${progress}%`,
-          color: `${progress}` < 5 ? "black" : "white"
+          color: progress < 5 ? "black" : "white"
         }}
+        role="progressbar"
+        aria-valuenow={progress}
+        aria-valuemin={0}
+        aria-valuemax={100}
       >
         {progress}%
       </div>

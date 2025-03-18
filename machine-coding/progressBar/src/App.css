@@ -10,7 +10,6 @@
 }
 
 .progressBar {
-  /* width: 75%; */
   background-color: green;
-  /* color: white; */
+  padding: 2px;
 }
