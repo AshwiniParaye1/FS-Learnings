@@ -14,7 +14,7 @@ const ProgressBar = ({ progress }) => {
       <div
         className="progressBar"
         style={{
-          //   width: `${progress}%`,
+          //   width: `${animatedProgress}%`,
           transform: `translateX(${animatedProgress - 100}%)`,
           color: progress < 5 ? "black" : "white"
         }}
