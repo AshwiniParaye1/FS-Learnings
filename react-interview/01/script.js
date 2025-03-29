@@ -18,7 +18,7 @@ function Counter() {
     setCount((prevCount) => prevCount + 1);
   }
 
-  //   return React.createElement(
+  //   const counter = React.createElement(
   //     "div",
   //     null,
   //     React.createElement("p", null, `Count: ${count}`),
@@ -26,6 +26,8 @@ function Counter() {
   //   );
 
   console.log("counter rendered");
+
+  //   return counter;
 
   return (
     <div>
@@ -39,6 +41,7 @@ function Counter() {
 const CounterParent = () => {
   const [showMsg, setShowMsg] = React.useState(false);
   const [showMsg2, setShowMsg2] = React.useState(false);
+  const [toggleCount, setToggleCount] = React.useState(false);
 
   const toggleMsg = () => {
     setShowMsg(!showMsg);
@@ -49,8 +52,21 @@ const CounterParent = () => {
 
   return (
     <div>
-      <h1>Counter</h1>
-      <Counter />
+      {toggleCount ? (
+        <div>
+          <h1>Counter</h1>
+          <Counter />
+        </div>
+      ) : (
+        <span>
+          <p>Counter Off</p>
+        </span>
+      )}
+
+      <button onClick={() => setToggleCount(!toggleCount)}>
+        Toggle Counter
+      </button>
+
       <br />
       {showMsg && <b>Now you see me </b>}
       <br />
